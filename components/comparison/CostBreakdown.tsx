@@ -140,8 +140,8 @@ export default function CostBreakdown({
             {smartTask.qualityStatus === "completed" &&
             smartTask.qualityScore != null &&
             frontierTask.qualityScore != null
-              ? ` — quality: ${smartTask.qualityScore.toFixed(1)} vs ${frontierTask.qualityScore.toFixed(1)}/5`
-              : " — fraction of the cost"}
+              ? ` - quality: ${smartTask.qualityScore.toFixed(1)} vs ${frontierTask.qualityScore.toFixed(1)}/5`
+              : " - fraction of the cost"}
             .
           </p>
         </div>

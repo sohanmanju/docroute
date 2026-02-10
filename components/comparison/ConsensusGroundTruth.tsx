@@ -53,7 +53,7 @@ export default function ConsensusGroundTruth({
 
       <p className="text-xs text-text-dim mb-6">
         The original input was an image. {n} model{n > 1 ? "s" : ""} extracted
-        data independently — where they agree forms the factual baseline for
+        data independently. Where they agree forms the factual baseline for
         quality scoring.
       </p>
 

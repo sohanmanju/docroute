@@ -4,7 +4,7 @@ import { internal } from "./_generated/api";
 
 const MODES = ["smart", "frontier", "budget"] as const;
 
-// Pipeline definitions — must match lib/pipelines.ts
+// Pipeline definitions - must match lib/pipelines.ts
 // We duplicate the step metadata here because Convex functions can't import from lib/
 const PIPELINE_STEPS: Record<
   string,
@@ -35,7 +35,7 @@ const PIPELINE_STEPS: Record<
 function getModelForTask(taskType: string, mode: string): string {
   if (mode === "frontier") return "anthropic/claude-sonnet-4";
   if (mode === "budget") {
-    // DeepSeek doesn't support vision — fall back to Gemini Flash for image tasks
+    // DeepSeek doesn't support vision - fall back to Gemini Flash for image tasks
     if (taskType === "vision") return "google/gemini-2.0-flash-001";
     return "deepseek/deepseek-chat";
   }

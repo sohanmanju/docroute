@@ -16,7 +16,7 @@ export default function Home() {
           <h1 className="text-2xl font-bold text-foreground">Dashboard</h1>
         </div>
         <p className="text-sm text-text-muted max-w-lg">
-          Smart LLM routing — the right model for each pipeline step. Frontier
+          Smart LLM routing. The right model for each pipeline step. Frontier
           quality at budget prices.
         </p>
       </div>

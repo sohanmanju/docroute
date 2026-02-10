@@ -16,7 +16,7 @@ const FEATURE_CONTEXT: Record<string, string> = {
     "The task was to analyze an image: describe it, generate SEO alt-text, and produce a brand fit analysis.",
 };
 
-/** Fisher-Yates shuffle — returns shuffled copy + mapping */
+/** Fisher-Yates shuffle - returns shuffled copy + mapping */
 function shuffleWithMapping<T>(items: T[]): { shuffled: T[]; mapping: number[] } {
   const indices = items.map((_, i) => i);
   for (let i = indices.length - 1; i > 0; i--) {
@@ -69,7 +69,7 @@ export const evaluateGroup = internalAction({
     // Fisher-Yates shuffle for blind labeling
     const { shuffled, mapping } = shuffleWithMapping(taskResults);
     console.log(
-      `Judge: blind mapping — ${mapping.map((origIdx, pos) => `Response ${LABELS[pos]}=${taskResults[origIdx].mode}`).join(", ")}`
+      `Judge: blind mapping - ${mapping.map((origIdx, pos) => `Response ${LABELS[pos]}=${taskResults[origIdx].mode}`).join(", ")}`
     );
 
     const feature = tasks[0].feature;
@@ -82,7 +82,7 @@ export const evaluateGroup = internalAction({
 
     if (inputText) {
       // Text-based features: use the original input as ground truth
-      groundTruth = `\nSOURCE DOCUMENT (ground truth — use this to verify factual accuracy):\n${inputText.slice(0, 3000)}`;
+      groundTruth = `\nSOURCE DOCUMENT (ground truth - use this to verify factual accuracy):\n${inputText.slice(0, 3000)}`;
     } else if (hasImage) {
       // Image-based features: use step 0 consensus as ground truth
       const extractions: string[] = [];
@@ -96,7 +96,7 @@ export const evaluateGroup = internalAction({
         }
       }
       if (extractions.length > 0) {
-        groundTruth = `\nCONSENSUS GROUND TRUTH — The original input was an image. Below are ${extractions.length} independent extractions from the first pipeline step. Use points where multiple extractions agree as the factual baseline for scoring accuracy:\n${extractions.map((e, i) => `--- Extraction ${i + 1} ---\n${e}`).join("\n\n")}`;
+        groundTruth = `\nCONSENSUS GROUND TRUTH - The original input was an image. Below are ${extractions.length} independent extractions from the first pipeline step. Use points where multiple extractions agree as the factual baseline for scoring accuracy:\n${extractions.map((e, i) => `--- Extraction ${i + 1} ---\n${e}`).join("\n\n")}`;
       }
     }
 
@@ -120,7 +120,7 @@ ${shuffled.map((item, i) => `--- Response ${LABELS[i]} ---\n${item.result.slice(
 
 Respond with ONLY valid JSON, no markdown fencing:
 {
-  ${hasImage && !inputText ? `"consensus": "<2-3 sentence summary of the key facts that multiple extractions agreed on — this is the ground truth you used>",\n  ` : ""}"A": { "accuracy": <number>, "completeness": <number>, "formatting": <number>, "rationale": "<brief justification>" },
+  ${hasImage && !inputText ? `"consensus": "<2-3 sentence summary of the key facts that multiple extractions agreed on - this is the ground truth you used>",\n  ` : ""}"A": { "accuracy": <number>, "completeness": <number>, "formatting": <number>, "rationale": "<brief justification>" },
   "B": { "accuracy": <number>, "completeness": <number>, "formatting": <number>, "rationale": "<brief justification>" },
   "C": { "accuracy": <number>, "completeness": <number>, "formatting": <number>, "rationale": "<brief justification>" }
 }`;

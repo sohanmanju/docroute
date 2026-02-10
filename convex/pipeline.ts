@@ -4,7 +4,7 @@ import { v } from "convex/values";
 import { action, internalAction } from "./_generated/server";
 import { internal } from "./_generated/api";
 
-// Pipeline definitions — duplicated here since Convex Node actions can't import from lib/
+// Pipeline definitions - duplicated here since Convex Node actions can't import from lib/
 const PIPELINE_PROMPTS: Record<
   string,
   Array<{ name: string; taskType: string; promptTemplate: string }>
@@ -256,7 +256,7 @@ const MODEL_PRICING: Record<string, { input: number; output: number }> = {
 function getModelForTask(taskType: string, mode: string): string {
   if (mode === "frontier") return "anthropic/claude-sonnet-4";
   if (mode === "budget") {
-    // DeepSeek doesn't support vision — fall back to Gemini Flash for image tasks
+    // DeepSeek doesn't support vision - fall back to Gemini Flash for image tasks
     if (taskType === "vision") return "google/gemini-2.0-flash-001";
     return "deepseek/deepseek-chat";
   }
@@ -434,7 +434,7 @@ export const runPipeline = internalAction({
           const buffer = await fileResponse.arrayBuffer();
           imageBase64 = Buffer.from(buffer).toString("base64");
           if (!inputContent) {
-            inputContent = "[Image uploaded — see image content]";
+            inputContent = "[Image uploaded - see image content]";
           }
         }
       } catch {

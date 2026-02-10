@@ -6,7 +6,7 @@ import Header from "@/components/layout/Header";
 import MobileNav from "@/components/layout/MobileNav";
 
 export const metadata: Metadata = {
-  title: "DocRoute — Smart LLM Routing",
+  title: "DocRoute - Smart LLM Routing",
   description:
     "The right model for each pipeline step. Frontier quality at budget prices.",
 };

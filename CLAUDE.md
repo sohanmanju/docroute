@@ -8,10 +8,10 @@ DocRoute is a Next.js 16 application using React 19, TypeScript 5, and Tailwind 
 
 ## Commands
 
-- `npm run dev` — Start development server (Turbopack)
-- `npm run build` — Production build
-- `npm run start` — Run production server
-- `npm run lint` — Run ESLint
+- `npm run dev` - Start development server (Turbopack)
+- `npm run build` - Production build
+- `npm run start` - Run production server
+- `npm run lint` - Run ESLint
 
 No test framework is configured yet.
 
@@ -26,6 +26,6 @@ No test framework is configured yet.
 
 ## Convex
 
-- `npx convex dev` — Run Convex dev server (watches for changes, syncs schema/functions, regenerates types)
-- `npx convex deploy` — Deploy to production
+- `npx convex dev` - Run Convex dev server (watches for changes, syncs schema/functions, regenerates types)
+- `npx convex deploy` - Deploy to production
 - Environment variables for Convex are in `.env.local` (`NEXT_PUBLIC_CONVEX_URL`, `CONVEX_DEPLOYMENT`).

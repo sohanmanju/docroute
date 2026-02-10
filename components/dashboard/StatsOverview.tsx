@@ -29,7 +29,7 @@ export default function StatsOverview() {
     },
     {
       label: "Avg Quality",
-      value: stats?.avgQuality != null ? `${stats.avgQuality.toFixed(1)}/5` : "—",
+      value: stats?.avgQuality != null ? `${stats.avgQuality.toFixed(1)}/5` : "-",
       icon: Star,
       color: "text-amber-500",
     },

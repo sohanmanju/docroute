@@ -118,7 +118,7 @@ export default function SavingsSummary({ tasks }: { tasks: Task[] }) {
                     {ml.label}
                   </p>
                   <p className="text-xl font-bold text-foreground">
-                    {task?.qualityScore?.toFixed(1) ?? "—"}
+                    {task?.qualityScore?.toFixed(1) ?? "-"}
                     <span className="text-xs font-normal text-text-dim">
                       /5
                     </span>
@@ -135,7 +135,7 @@ export default function SavingsSummary({ tasks }: { tasks: Task[] }) {
             })}
           </div>
           <p className="text-xs text-text-dim mt-2 italic">
-            Blind evaluation by GPT-4o — outputs shown as Response A/B/C in randomized order.
+            Blind evaluation by GPT-4o - outputs shown as Response A/B/C in randomized order.
           </p>
         </div>
       )}
@@ -147,8 +147,8 @@ export default function SavingsSummary({ tasks }: { tasks: Task[] }) {
           Not every pipeline step needs the most powerful model.
         </p>
         <ul className="list-disc list-inside space-y-1 ml-2">
-          <li>Extraction and classification are routine — budget models handle them perfectly</li>
-          <li>Reasoning and analysis need frontier intelligence — only top models catch nuances</li>
+          <li>Extraction and classification are routine - budget models handle them perfectly</li>
+          <li>Reasoning and analysis need frontier intelligence - only top models catch nuances</li>
           <li>Auto router picks the optimal model per request automatically</li>
         </ul>
       </div>

@@ -30,7 +30,7 @@ body {
   min-height: 100vh;
 }
 
-/* Card utility — flat card */
+/* Card utility - flat card */
 .glass-card {
   background: #FFFFFF;
   border: 1px solid rgba(14,15,12,0.12);
